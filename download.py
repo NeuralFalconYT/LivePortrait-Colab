@@ -5,7 +5,7 @@ import subprocess
 from tqdm import tqdm
 
 def conditional_download(url, download_file_path):
-    print(f"Downloading {os.path.basename(download_file_path)}")
+    print("Downloading " + os.path.basename(download_file_path))
     base_path = os.path.dirname(download_file_path)
 
     if not os.path.exists(base_path):
@@ -18,29 +18,29 @@ def conditional_download(url, download_file_path):
         request = urllib.request.urlopen(url)
         total = int(request.headers.get('Content-Length', 0))
     except urllib.error.URLError as e:
-        print(f"Error: Unable to open the URL - {url}")
-        print(f"Reason: {e.reason}")
+        print("Error: Unable to open the URL - " + url)
+        print("Reason: " + e.reason)
         return
 
     with tqdm(total=total, desc='Downloading', unit='B', unit_scale=True, unit_divisor=1024) as progress:
         try:
             urllib.request.urlretrieve(url, download_file_path, reporthook=lambda count, block_size, total_size: progress.update(block_size))
         except urllib.error.URLError as e:
-            print(f"Error: Failed to download the file from the URL - {url}")
-            print(f"Reason: {e.reason}")
+            print("Error: Failed to download the file from the URL - " + url)
+            print("Reason: " + e.reason)
             return
 
-    print(f"Download successful!")
-    print(f"URL: {url}")
-    print(f"Save at: {download_file_path}")
+    print("Download successful!")
+    print("URL: " + url)
+    print("Save at: " + download_file_path)
 
 def download_models(base_path):
-    conditional_download("https://raw.githubusercontent.com/neuralfalconbackup/LivePortrait-Colab/main/webapp.py", f"{base_path}/LivePortrait/webapp.py")
+    conditional_download("https://raw.githubusercontent.com/neuralfalconbackup/LivePortrait-Colab/main/webapp.py", base_path + "/LivePortrait/webapp.py")
     
     def download_files(file_list, relative_path, base_url):
         for file_name in file_list:
-            download_file_path = f"{base_path}/{relative_path}/{file_name}"
-            conditional_download(f"{base_url}/{file_name}", download_file_path)
+            download_file_path = base_path + "/" + relative_path + "/" + file_name
+            conditional_download(base_url + "/" + file_name, download_file_path)
 
     buffalo_l_files = ["2d106det.onnx", "det_10g.onnx"]
     buffalo_l_path = "LivePortrait/pretrained_weights/insightface/models/buffalo_l"
@@ -77,10 +77,10 @@ def main():
         subprocess.run(["git", "clone", repo_url])
 
     root_path = os.getcwd()
-    base_path = f"{root_path}"
+    base_path = root_path
     download_models(base_path)
     
-    os.chdir(f"{base_path}/{repo_dir}")
+    os.chdir(base_path + "/" + repo_dir)
     subprocess.run(['pip', 'install', '-r', 'requirements.txt'])
     from IPython.display import clear_output
     clear_output()
