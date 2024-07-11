@@ -9,6 +9,7 @@
 
 https://github.com/NeuralFalconYT/LivePortrait-Colab/assets/174191741/b25762c6-024a-4c53-9359-ea6163bdf645
 ## Credit
+[LivePortrait GitHub](https://github.com/KwaiVGI/LivePortrait)
 ```bibtex
 @article{guo2024liveportrait,
   title   = {LivePortrait: Efficient Portrait Animation with Stitching and Retargeting Control},
