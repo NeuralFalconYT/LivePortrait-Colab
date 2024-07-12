@@ -5,9 +5,8 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuralfalconbackup/LivePortrait-Colab/blob/main/LivePortrait_Longer_Video.ipynb) <br>
 
 
+https://github.com/NeuralFalconYT/LivePortrait-Colab/assets/9cb2e192-fcd9-4c90-862d-59979acc3a3c
 
-
-https://github.com/NeuralFalconYT/LivePortrait-Colab/assets/174191741/b25762c6-024a-4c53-9359-ea6163bdf645
 ## Credit
 [LivePortrait GitHub](https://github.com/KwaiVGI/LivePortrait)
 ```bibtex
