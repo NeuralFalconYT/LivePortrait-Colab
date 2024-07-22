@@ -4,9 +4,9 @@
 ### LivePortrait Google Colab for Longer Video Duration <br>
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuralfalconbackup/LivePortrait-Colab/blob/main/LivePortrait_Longer_Video.ipynb) <br>
 
-
+### Image To Video
 https://github.com/NeuralFalconYT/LivePortrait-Colab/assets/9cb2e192-fcd9-4c90-862d-59979acc3a3c
-
+### Video To Video
 https://github.com/user-attachments/assets/36983b7e-853a-4dbf-a75e-e22a5b9d21cc
 
 ## Credit
