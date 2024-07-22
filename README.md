@@ -7,6 +7,8 @@
 
 https://github.com/NeuralFalconYT/LivePortrait-Colab/assets/9cb2e192-fcd9-4c90-862d-59979acc3a3c
 
+https://github.com/user-attachments/assets/36983b7e-853a-4dbf-a75e-e22a5b9d21cc
+
 ## Credit
 [LivePortrait GitHub](https://github.com/KwaiVGI/LivePortrait)
 ```bibtex
